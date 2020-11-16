@@ -2,8 +2,22 @@ h1{
 	font-family: 'Cormorant Upright', serif;
 	color: #f8d3c5;
 	font-size: 3rem;
-	text-align: center;
+    text-align: center;
+    text-shadow: 0.5px 0.5px 0.2px #fceee9; /*CSS3 Technique: shadows*/
+}
 
+/*CSS3 Technique Animation on header*/
+.box{
+    animation-name: myanimation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes myanimation{
+    0% {color: #f8d3c5;}
+    25% {color:lightsalmon;}
+    50% {color: lightcoral;}
+    100% {color: #f8d3c5;}
 }
 
 h2{
@@ -28,15 +42,22 @@ header{
 	top:0; 
 }
 
+/*CSS3 Technique: gradients*/
 body{
-    background-color: #667b68;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(102,123,104,1) 49%, rgba(0,212,255,1) 100%);
 }
 
 figcaption{
 	font-family: 'Cormorant Upright', serif;
-	color#fceee9;
+	color: #fceee9;
 	text-align: center;
 
+}
+
+/*CSS3 Technique: Transparency*/
+img:hover{
+	opacity: .75;
 }
 
 nav {
@@ -72,7 +93,7 @@ aside{
 figure img{
 	margin: 0 auto;
 	max-width:  100%;
-}
+} 
 
 footer{
 	background-color: #667b68;
@@ -80,6 +101,8 @@ footer{
 	padding:3%;
 
 }
+
+
 
 /*@media (max-width: 1000px) and (min-width: 726px)
 
@@ -89,11 +112,20 @@ Desktop: 1024+ */
 
 @media(min-width: 768px) and (max-width: 1023px){
 	nav ul li{
-		font-size: 1.25rem;
+		font-size: 1.0rem;
 	}
 	section{
 		max-height: 1023px;
-  		overflow: hidden; 
+          overflow: hidden; 
+    }
+    
+    aside img{
+		margin: 0%;
+		width: 27%;
+		float: center;
+		max-width: 27%;
+		padding:2%;
+		
 	}
 }
 
@@ -105,11 +137,17 @@ Desktop: 1024+ */
 		font-size: 3rem;
 	}
 	p{
-		font-size: 1.25rem;
+		font-size: 1.50rem;
 	}
 	nav ul li{
 		font-size: 1.25rem;
-	}
+    }
+     header img{
+       display: block;
+       margin-left: auto;
+       margin-right: auto;
+       width: 100%;  
+     }
 
 	section{
 		max-width: 1350px;
@@ -121,14 +159,12 @@ Desktop: 1024+ */
 	aside img{
 		margin: 0%;
 		width: 27%;
-		float: left;
+		float: center;
 		max-width: 27%;
 		padding:3%;
 		
 	}
 
-
-	
 	footer{
 		clear: both;
 	}
